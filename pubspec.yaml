@@ -47,6 +47,8 @@ dependencies:
   provider: ^6.0.5
   pinput: ^3.0.0
   image_picker: ^1.0.2
+  google_place: ^0.4.7
+  google_maps_webservice: ^0.0.20-nullsafety.5
 
 dev_dependencies:
   flutter_test:
@@ -76,6 +78,7 @@ flutter:
     - lib/assets/grape2.png
     - lib/assets/strawberries.png
     - lib/assets/orange.png
+    - lib/assets/mango.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
