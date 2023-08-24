@@ -67,7 +67,7 @@ class _UserInformationScreenState extends State<UserInformationScreen> {
                 Container(
                   child: Column(
                     children: [
-                      textField(hintText: "Aditi M", icon: Icons.account_circle, inputType: TextInputType.text, maxLines: 1, controller: nameController)
+                      textField(hintText: "User", icon: Icons.account_circle, inputType: TextInputType.text, maxLines: 1, controller: nameController)
                     ],
                   ),
                 ),

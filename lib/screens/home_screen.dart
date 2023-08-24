@@ -12,7 +12,9 @@ import 'package:fluentui_icons/fluentui_icons.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import 'package:provider/provider.dart';
 import '../maps/maps.dart';
+import '../provider/auth_provider.dart';
 import 'chats/community_view.dart';
 
 import '../Gov_Schemes/government_schemes.dart';
@@ -27,8 +29,10 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
 
+
   @override
   Widget build(BuildContext context) {
+    final ap = Provider.of<AuthProvider>(context, listen: false);
     return Scaffold(
       key: _scaffoldKey,
       appBar: AppBar(
@@ -47,18 +51,7 @@ class _HomeScreenState extends State<HomeScreen> {
           },
         ),
         actions: [
-          IconButton(
-            icon: Icon(Icons.logout, color: Colors.white),
-            onPressed: () {
-              // Navigate to BottomBar when the person icon is pressed
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => BottomBar(),
-                ),
-              );
-            },
-          ),
+          Text("           "),
         ],
       ),
       drawer: Drawer(
@@ -87,7 +80,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       Navigator.pushNamed(context, '/profile'); // Navigate to Profile screen
                     },
                     child: Text(
-                      'Aditi M',
+                      ap.userModel.name,
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: 18,
@@ -474,7 +467,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           ),
                           Row(
                             children: [
-                              Text("Mr. Mihir Amin"),
+                              Text("Mr. Rahul Kamble"),
                             ],
                           ),
 Row(
